@@ -16,6 +16,15 @@ defmodule Math do
   end
 end
 
-fun = &Math.zero?/1
-IO.puts fun.(0)
-IO.puts fun.(1)
+zero_captured = &Math.zero?/1
+IO.puts zero_captured.(0)
+IO.puts zero_captured.(1)
+
+add = &+/2
+IO.puts add.(1, 2)
+
+add_one = &(&1 + 1)
+IO.puts add_one.(5)
+
+greeting = &"Good #{&1}"
+IO.puts greeting.("morning")
