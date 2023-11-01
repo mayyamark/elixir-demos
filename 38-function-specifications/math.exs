@@ -1,4 +1,8 @@
 defmodule Math do
+  @moduledoc """
+  A module with math helpers
+  """
+
   @spec diff(number, number) :: number
   def diff(a, b) do
     a - b
